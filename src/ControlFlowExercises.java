@@ -14,7 +14,7 @@ public class ControlFlowExercises {
 //      ========  do while ========
 //        int i =0;
 //        do {
-//            System.out.println(i);
+//            System.out.print(i);
 //            i = i+2;
 //        }while (i <= 100);
 
@@ -32,9 +32,9 @@ public class ControlFlowExercises {
 
 //        ====== FOR LOOP ======
 
-//        double i;
+//        int i;
 //        for(i = 5; i <=15;i++ ) {
-//            System.out.println(i);
+//            System.out.print(i);
 //        }
 //        for(i = 0; i <= 100; i+=2){
 //            System.out.println(i);
@@ -60,9 +60,41 @@ public class ControlFlowExercises {
 //        }
 
 //        ===== TABLE =====
-        System.out.println("Enter a code: ");
-        int codeNumber = scanner.nextInt();
+//        boolean continueUser = false;
+//        do {
+//            System.out.println("Enter a code: ");
+//            int codeNumber = scanner.nextInt();
+//            int i;
+//            System.out.println("Number" + " | " + "Squared" + " | " + "Cubed");
+//            System.out.println("======" + " | " + "=======" + " | " + "======");
+//            for (i = 1; i <= codeNumber; i++) {
+//                System.out.println(i + "      |    " + Math.pow(i, 2) + "  |    " + Math.pow(i, 3));
+//            }
+//            System.out.println("Would you like to continue?");
+//            String userInput = scanner.next();
+//            if (userInput.equalsIgnoreCase("yes") || userInput.equalsIgnoreCase("y")) {
+//                continueUser = true;
+//            }
+//        } while (continueUser);
 
+//        ===== LETTER GRADES =====
+//        boolean continueUser = false;
+//        do {
+//            System.out.println("What grade do you want?");
+//
+//            int userGrade = scanner.nextInt();
+//            for ()
+//            System.out.println(userGrade);
+//            System.out.println("Continue?");
+//            String userInput = scanner.next();
+//            if (userInput.equalsIgnoreCase("yes") || userInput.equalsIgnoreCase("y")) {
+//                continueUser = true;
+//            } else if (userInput.equalsIgnoreCase("no") || userInput.equalsIgnoreCase("n")) {
+//                continueUser = false;
+//            }
+//        } while(continueUser);
     }
+
 }
+//}
 
