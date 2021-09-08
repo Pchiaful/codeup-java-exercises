@@ -17,5 +17,7 @@ public class Therapist {
             }
 
         } while (patientDiagnosis);
+
+//        .contains is a thing, lookd it up, its like .equals
     }
 }
