@@ -6,26 +6,39 @@ public class MethodWarmup {
 //                - If only one integer is passed, treat the calculation as if zero was passed as the second argument.
 //                *** BONUS *** allow the method to accept two doubles and return a double output
 
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Give me two numbers, please.");
-        int userInput = sc.nextInt();
-        int differenceInput = getDifference(userInput, userInput);
-        System.out.println(differenceInput);
-    }
+//    public static void main(String[] args) {
+//        Scanner sc = new Scanner(System.in);
+//        System.out.println("Give me two numbers, please.");
+//        int userInput = sc.nextInt();
+//        int differenceInput = getDifference(userInput, userInput);
+//        System.out.println(differenceInput);
+//    }
 
-    public static int getDifference(int numberOne, int numberTwo) {
-        if (numberOne > numberTwo) {
-            return numberOne-numberTwo;
-        }else if (numberTwo > numberOne) {
-           return numberTwo - numberOne;
-        }
-
-    }
+//    public static int getDifference(int numberOne, int numberTwo) {
+//        if (numberOne > numberTwo) {
+//            return numberOne-numberTwo;
+//        }else if (numberTwo > numberOne) {
+//           return numberTwo - numberOne;
+//        }
+//
+//    }
 //    public static void getDifference() {
 //
 //    }
+public static void main(String[] args) {
+    addNums(5);
 }
+// TODO: use recursion to add all numbers up, from 1 to the given number input
+    /*
+        addNums(5) would trigger a calculation of...
+            5 + 4 + 3 + 2 + 1, evaluating to 15
+     */
+ public static int addNums(int num) {
+    if (num == 1) return 1;
+    return addNums(num - 1) + num;
+    }
+ }
+
 
 //===== JUSTINS SOLUTION =====
 //public class MethodWarmup {
