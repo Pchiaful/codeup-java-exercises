@@ -1,0 +1,13 @@
+import java.util.Scanner;
+public class TestCode {
+    public static void main(String[] args) {
+        int x = 5 * 4 % 3;
+        System.out.println(x);
+    }
+//    public class TernaryTester {
+//     public static void main(String[] args) {
+//                     int x = 5;
+//                     System.out.println(x > 2 ? x < 4 ? 10 : 8 : 7);
+//                 }
+}
+
