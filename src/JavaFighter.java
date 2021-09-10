@@ -16,4 +16,24 @@ public class JavaFighter {
             return  D20.roll20();
         }
 
+        public JavaFighter() {
+
+        }
+        public JavaFighter(String name, int hitPoints, int maxDamage) {
+            System.out.println("A new fighter approaches.");
+            this.name = name;
+            this.hitPoints = hitPoints;
+            this.maxDamage = maxDamage;
+            this.printStats();
+        }
+
+//    private int hitPoints;
+//
+//    public void setHitPoints(int hitPoints) {
+//        this.hitPoints = hitPoints;
+//    }
+//
+//    public int getHitPoints() {
+//        return hitPoints;
+//    }
 }
