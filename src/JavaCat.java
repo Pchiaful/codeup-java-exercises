@@ -25,6 +25,7 @@ public class JavaCat {
     public JavaCat() {
 
     }
+
     public JavaCat(String name, String sound) {
         this.name = name;
         this.sound = sound;
