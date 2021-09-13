@@ -45,6 +45,22 @@ public class Input {
 //        return input;
 //    }
 
+    public double getDouble() {
+        System.out.println("Please enter an integer: ");
+        double userInput = scanner.nextDouble();
+        return userInput;
+    }
+    public double getDouble(double min, double max) {
+        String prompt = "Enter and integer between " + min + " and " + max;
+        System.out.println("Enter and integer between " + min + " and " + max);
+        double userInput = scanner.nextInt();
+        while (userInput <= min || userInput >= max) {
+            System.out.println("Enter and integer between " + min + " and " + max);
+            userInput = scanner.nextInt();
+        }
+        return userInput;
+    }
+
 
 
     public Input() {
