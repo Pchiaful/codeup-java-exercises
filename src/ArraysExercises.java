@@ -7,32 +7,30 @@ public class ArraysExercises {
 
     public static void main(String[] args) {
 //        int[] numbers = {1, 2, 3, 4, 5};
-//        System.out.println(numbers);
-        Person jeff = new Person("Jeff");
-        Person bob = new Person("Bob");
-        Person pat = new Person("Pat");
+//        System.out.println(Arrays.toString(numbers));
 
         Person[] people = new Person[3];
-        people[0] = jeff;
-        people[1] = bob;
-        people[2] = pat;
+        people[0] = new Person("Evie");
+        people[1] = new Person("Bob");
+        people[2] = new Person("Pat");
 
-        for(Person peoples : people) {
-            System.out.println(peoples.getName());
+//        for(Person peoples : people) {
+//            System.out.println(peoples.getName());
+//        }
 
-        }
-
-        for (Person morePeople : addPerson(people, "Greg")) {
-            System.out.println(morePeople.getName());
-        }
+        System.out.println(Arrays.toString(people));
+       people = addPerson(people, new Person("Gal"));
+        System.out.println(Arrays.toString(people));
+//                                              no idea what goes here
+//        for (Person morePeople : addPerson(people, ???)) {
+//            System.out.println(morePeople.getName());
+//        }
 
 
     }
-    public static Person[] addPerson (Person[] people, String person ) {
+    public static Person[] addPerson (Person[] people, Person newPerson ) {
         Person[] addedPerson = Arrays.copyOf(people, people.length + 1);
-
-        addedPerson[people.length] = person;
-
+        addedPerson[people.length] = newPerson;
         return addedPerson;
     }
 }
