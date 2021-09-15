@@ -45,8 +45,20 @@ public class Input {
 //        return input;
 //    }
 
-    public double getDouble() {
-        System.out.println("Please enter an integer: ");
+//    public double getDouble() {
+//        System.out.println("Please enter an integer: ");
+//        double userInput = scanner.nextDouble();
+//        return userInput;
+//    }
+//    solutions for getDouble
+    public double getDouble(){
+        System.out.println("Enter a number:");
+        double userInput = scanner.nextDouble();
+        return userInput;
+    }
+
+    public double getDouble(String prompt){
+        System.out.println(prompt);
         double userInput = scanner.nextDouble();
         return userInput;
     }
