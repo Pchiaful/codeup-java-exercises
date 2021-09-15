@@ -5,6 +5,10 @@ public class Bird {
     //what kind of bird?
     private String name;
 
+    public Bird(String name) {
+        this.name = name;
+    }
+
     public String getName() {
         return name;
     }
@@ -19,5 +23,9 @@ public class Bird {
 
     public void move() {
         System.out.println("Flap flap");
+    }
+
+    public Bird(){
+
     }
 }

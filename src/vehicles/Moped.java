@@ -9,4 +9,10 @@ public class Moped extends Vehicle{
         super.makeNoise();
         System.out.println("...Hiss hisssss");
     }
+    public Moped(String name){
+        super(name);
+    }
+    public Moped() {
+
+    }
 }

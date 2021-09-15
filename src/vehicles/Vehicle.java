@@ -2,7 +2,7 @@ package vehicles;
 
 public class Vehicle {
 
-    private String name;
+    protected String name;
 
     public String getName() {
         return name;
@@ -14,8 +14,12 @@ public class Vehicle {
 
     public void makeNoise() {
         System.out.println("Vroom vroom");
+    }
+    public Vehicle() {
 
     }
-
+    public Vehicle(String name) {
+        this.name = name;
+    }
 }
 

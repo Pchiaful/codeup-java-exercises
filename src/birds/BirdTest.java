@@ -3,8 +3,10 @@ package birds;
 public class BirdTest {
 
     public static void main(String[] args) {
-        Bird cardinal = new Bird();
-        cardinal.setName("cardinal");
+//        Bird cardinal = new Bird();
+//        cardinal.setName("cardinal");
+        //same as above but faster syntax
+        Bird cardinal = new Bird("Cardinal");
         System.out.println(cardinal.getName() + " says: ");
         cardinal.makeNoise();
         cardinal.move();
