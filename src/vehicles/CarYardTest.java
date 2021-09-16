@@ -2,19 +2,24 @@ package vehicles;
 
 public class CarYardTest {
     public static void main(String[] args) {
-        Vehicle bolt = new Bolt();
+        Car bolt = new Car();
         bolt.setName("Chevy Bolt");
-        Vehicle moped = new Moped();
+        Car moped = new Car();
         moped.setName("Moped");
-        Vehicle car = new Car();
-        car.setName("Zoomer");
+        Car jeep = new Car();
+        jeep.name = "Wrangler";
 
-        Vehicle[] vehicles = new Vehicle[3];
+        Vehicle[] allTheCars = new Vehicle[3];
         vehicles[0] = bolt;
         vehicles[1] = moped;
-        vehicles[2] = car;
+        vehicles[2] = jeep;
 
-        Vehicle valet = new Vehicle();
+        CarYard caryard = new CarYard();
+        caryard.vehicles = allTheCars;
+//        .alarmCascade();
+
+//        Vehicle valet = new Vehicle();
+//        vehicles.alarm
 
 
     }

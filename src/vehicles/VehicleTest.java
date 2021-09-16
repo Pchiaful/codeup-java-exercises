@@ -18,5 +18,11 @@ public class VehicleTest {
 //        car.setName("Focus");
         car.makeNoise();
         System.out.println(car.getName());
+
+        Jeep wrangler = new Jeep();
+        wrangler.setName("Wrangler");
+        System.out.println(wrangler.getName() + " goes:");
+        wrangler.makeNoise();
+
     }
 }

@@ -3,13 +3,11 @@ package vehicles;
 public class CarYard {
     Vehicle[] vehicles;
 
-    public void alarmCascade(Vehicle[] parkedVehicle) {
-        for(Vehicle vehicles: parkedVehicle) {
-            System.out.println(vehicles.getName() + " goes ");
-            vehicles.makeNoise();
+    public void alarmCascade(){
+        for (Vehicle vehicle: vehicles){
+            System.out.println(vehicle.getName() + " goes oooOOOOOO oooooOOOO");
         }
     }
-
 //    publice Vehicle findVehicle(String name, Vehicle[] vehicles) {
 //        for(Vehicle vehicle: vehicles){
 //            if (vehicle.getName().equalsIgnoreCase()){

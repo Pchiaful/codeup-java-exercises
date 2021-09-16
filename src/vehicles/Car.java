@@ -1,13 +1,12 @@
 package vehicles;
 
-public class Car extends Vehicle{
-    public void makeNoise() {
-        System.out.println("Shhhhh Shhhhh");
+public class Car extends Vehicle {
+
+    public Car() {
+        super("Just plain car");
     }
+
     public Car(String name) {
         super(name);
-    }
-    public Car() {
-
     }
 }
