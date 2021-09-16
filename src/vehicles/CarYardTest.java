@@ -10,13 +10,13 @@ public class CarYardTest {
         jeep.name = "Wrangler";
 
         Vehicle[] allTheCars = new Vehicle[3];
-        vehicles[0] = bolt;
-        vehicles[1] = moped;
-        vehicles[2] = jeep;
+        allTheCars[0] = bolt;
+        allTheCars[1] = moped;
+        allTheCars[2] = jeep;
 
         CarYard caryard = new CarYard();
         caryard.vehicles = allTheCars;
-//        .alarmCascade();
+//        allTheCars.alarmCascade();
 
 //        Vehicle valet = new Vehicle();
 //        vehicles.alarm
