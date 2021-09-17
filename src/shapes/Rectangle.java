@@ -1,6 +1,19 @@
 package shapes;
 
-public class Rectangle {
+public class Rectangle extends Quadrilateral implements Measurable{
+    public Rectangle(int length, int width) {
+        super(length, width);
+    }
+
+    @Override
+    public void setLength(int length) {
+
+    }
+
+    @Override
+    public void setWidth(int width) {
+
+    }
 //    protected int length;
 //    protected int width;
 ////              this is necessary here

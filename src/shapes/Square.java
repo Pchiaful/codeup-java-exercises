@@ -1,6 +1,19 @@
 package shapes;
 
-public class Square extends Rectangle{
+public class Square extends Quadrilateral{
+    public Square(int length, int width) {
+        super(length, width);
+    }
+
+    @Override
+    public void setLength(int length) {
+
+    }
+
+    @Override
+    public void setWidth(int width) {
+
+    }
 //    protected int side;
 //
 //    public Square(int side) {
