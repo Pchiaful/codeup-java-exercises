@@ -1,8 +1,18 @@
 package shapes;
 
 public class Square extends Quadrilateral{
-    public Square(double length, double width) {
-        super(length, width);
+    public Square(double side) {
+        super(side, side);
+    }
+
+    @Override
+    public double setLength() {
+        double side = length;
+    }
+
+    @Override
+    public double setWidth() {
+        double side = width;
     }
 
     @Override
@@ -14,7 +24,18 @@ public class Square extends Quadrilateral{
     public void setWidth(double width) {
 
     }
-//    protected int side;
+
+    @Override
+    public double getPerimeter() {
+        return super.getPerimeter();
+    }
+
+    @Override
+    public double getArea() {
+        return super.getArea();
+    }
+
+    //    protected int side;
 //
 //    public Square(int side) {
 //        super(side, side);
