@@ -1,17 +1,17 @@
 package shapes;
 
 public class Square extends Quadrilateral{
-    public Square(int length, int width) {
+    public Square(double length, double width) {
         super(length, width);
     }
 
     @Override
-    public void setLength(int length) {
+    public void setLength(double length) {
 
     }
 
     @Override
-    public void setWidth(int width) {
+    public void setWidth(double width) {
 
     }
 //    protected int side;

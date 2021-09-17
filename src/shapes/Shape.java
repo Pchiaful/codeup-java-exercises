@@ -1,6 +1,6 @@
 package shapes;
 
-abstract public class Shape {
+public abstract class Shape {
 
 
 }
