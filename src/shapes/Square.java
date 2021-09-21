@@ -5,15 +5,15 @@ public class Square extends Quadrilateral{
         super(side, side);
     }
 
-    @Override
-    public double setLength() {
-        double side = length;
-    }
-
-    @Override
-    public double setWidth() {
-        double side = width;
-    }
+//    @Override
+//    public double setLength() {
+//        double side = length;
+//    }
+//
+//    @Override
+//    public double setWidth() {
+//        double side = width;
+//    }
 
     @Override
     public void setLength(double length) {
