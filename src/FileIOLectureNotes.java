@@ -1,5 +1,6 @@
 import java.io.IOException;
 import java.nio.file.*;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -35,10 +36,43 @@ public class FileIOLectureNotes {
 //            ioe.printStackTrace();
 //        }
         List<String> imperials = Arrays.asList("Claudius", "Nero", "Romulus", "Caesar");
+//        try{
+//            Files.write(pathToOurFile, imperials);
+//        }catch (IOException ioe){
+//            ioe.printStackTrace();
+//        }
+//        List<String> currentList = new ArrayList<>();
+//        try{
+//            currentList = Files.readAllLines(pathToOurFile);
+//        }catch (IOException ioe){
+//            ioe.printStackTrace();
+//        }
+//        for (String item : currentList){
+//            System.out.println(item);
+//        }
+
+        FileIOLectureNotes fiol = new FileIOLectureNotes();
+        fiol.readFileAndOutPut(pathToOurFile);
+
         try{
-            Files.write(pathToOurFile, imperials);
+            Files.writeString(pathToOurFile, "Palpatine\n", StandardOpenOption.APPEND);
+        }catch (IOException ioe) {
+            ioe.printStackTrace();
+        }
+        fiol.readFileAndOutPut(pathToOurFile
+        );
+
+    }
+    public void readFileAndOutPut(Path pathToFile){
+        List<String> linesInTheFile = new ArrayList<>();
+        try{
+            linesInTheFile = Files.readAllLines(pathToFile);
         }catch (IOException ioe){
             ioe.printStackTrace();
         }
+        for (String line : linesInTheFile){
+            System.out.println(line);
+        }
+
     }
 }
