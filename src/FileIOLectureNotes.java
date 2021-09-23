@@ -2,6 +2,7 @@ import java.io.IOException;
 import java.nio.file.*;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Iterator;
 import java.util.List;
 
 public class FileIOLectureNotes {
@@ -51,28 +52,69 @@ public class FileIOLectureNotes {
 //            System.out.println(item);
 //        }
 
+//        ADDS TO OUR TXT LIST
         FileIOLectureNotes fiol = new FileIOLectureNotes();
+//        fiol.readFileAndOutPut(pathToOurFile);
+//
+//        try{
+//            Files.writeString(pathToOurFile, "Palpatine\n", StandardOpenOption.APPEND);
+//        }catch (IOException ioe) {
+//            ioe.printStackTrace();
+//        }
         fiol.readFileAndOutPut(pathToOurFile);
+//        ADD MUTIPLE ITEMS TO LIST
+        List<String> lateImperials = new ArrayList<>();
+        lateImperials.add("Galla");
+        lateImperials.add("Theodora");
+        lateImperials.add("Augustus");
 
         try{
-            Files.writeString(pathToOurFile, "Palpatine\n", StandardOpenOption.APPEND);
-        }catch (IOException ioe) {
-            ioe.printStackTrace();
-        }
-        fiol.readFileAndOutPut(pathToOurFile
-        );
-
-    }
-    public void readFileAndOutPut(Path pathToFile){
-        List<String> linesInTheFile = new ArrayList<>();
-        try{
-            linesInTheFile = Files.readAllLines(pathToFile);
+            Files.write(pathToOurFile, lateImperials, StandardOpenOption.APPEND);
         }catch (IOException ioe){
             ioe.printStackTrace();
         }
-        for (String line : linesInTheFile){
-            System.out.println(line);
+
+        fiol.readFileAndOutPut(pathToOurFile);
+
+        List<String> currentList = new ArrayList<>();
+        try{
+            currentList = Files.readAllLines(pathToOurFile);
+        }catch (IOException ioe){
+            ioe.printStackTrace();
+        }
+//        REMOVE FROM LIST
+        Iterator<String> listIterator = currentList.iterator();
+        while (listIterator.hasNext()){
+            String item = listIterator.next();
+            if (item.equalsIgnoreCase("Palpatine")){
+                listIterator.remove();
+            }
+        }
+//        REMOVE FROM LIST-WRITE THE MODIFIED ARRAYLIST TO THE TXT FILE
+        try{
+            Files.write(pathToOurFile, currentList);
+        }catch (IOException ioe){
+            ioe.printStackTrace();
+        }
+        fiol.readFileAndOutPut(pathToOurFile);
+    }
+
+//        METHOD TO DRY CODE
+        public void readFileAndOutPut (Path pathToFile){
+            List<String> linesInTheFile = new ArrayList<>();
+            try {
+                linesInTheFile = Files.readAllLines(pathToFile);
+            } catch (IOException ioe) {
+                ioe.printStackTrace();
+            }
+            for (String line : linesInTheFile) {
+                System.out.println(line);
+            }
+
         }
 
+
     }
-}
+
+
+

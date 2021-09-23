@@ -14,4 +14,9 @@ public class Comedy extends Moive{
     public void setFunny(boolean funny) {
         this.funny = funny;
     }
+
+    public static void main(String[] args) {
+        Comedy comedy = new Comedy("unfunny", "Mr lorg", false);
+        System.out.println(comedy.getName() + " " + comedy.getDirector() + " " + comedy.isFunny());
+    }
 }
