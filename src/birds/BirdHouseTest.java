@@ -5,7 +5,7 @@ public class BirdHouseTest {
     public static void main(String[] args) {
         //polymorphic array:
         //poly = many ; morphic = shape/form
-        Bird[] birds = new Bird[3];
+        Bird[] birds = new Bird[4];
 //        Bird goldfinsh = new Finch();
 //        goldfinsh.setName("Lesser Goldfinch");
         birds[0] = new Finch();
@@ -14,6 +14,8 @@ public class BirdHouseTest {
         birds[1].setName("Mallard");
         birds[2] = new Penguin();
         birds[2].setName("King Penguin");
+        birds[3] = new Finch();
+        birds[3].setName("Tiny");
         //instantiate BirdHouse and create a new object: flybois
         BirdHouse flyBois = new BirdHouse();
         flyBois.observeBirds(birds);

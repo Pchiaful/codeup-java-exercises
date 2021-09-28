@@ -34,3 +34,9 @@ public class ArraysExercises {
         return addedPerson;
     }
 }
+
+// Arrays-fixed length
+// can hold primitive values
+//    Way of keeping track of a group of values of the same type
+//      compared to ArrayLists-can change length
+//      cannot store primitive types
