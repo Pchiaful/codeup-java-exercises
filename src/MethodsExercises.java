@@ -67,4 +67,28 @@ public class MethodsExercises {
 
         }
     }
+
+    public static int getInteger(int min, int max) {
+        Scanner sc = new Scanner(System.in);
+        int userInt = sc.nextInt();
+        if (userInt >= min && userInt <= max) {
+            return userInt;
+        } else {
+            System.out.println("Input out of range!");
+            return getInteger(min, max);
+        }
+    }
+
+    public static int getRandomInt(int min, int max) {
+        return min + (int)(Math.random() * ((max - min) + 1));
+    }
+
+    public static void diceRoll() {
+        System.out.println("Welcome to Dice Roll!");
+        System.out.println("Enter number of sides of the dice. (1-6)");
+        int noOfSidesOfDice = getInteger(1, 6);
+        System.out.printf("You have rolled %d and a %d",
+                getRandomInt(1, noOfSidesOfDice),
+                getRandomInt(1, noOfSidesOfDice));
+    }
 }
